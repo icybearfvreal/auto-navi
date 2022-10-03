@@ -1,0 +1,364 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f9ec00;
+    font-family: 'Nova Round', cursive;
+}
+
+#targ {
+    opacity: 0;
+    background: #f9ec00;
+    position: absolute;
+    transform: rotate(90deg);
+    width: 85px;
+    height: 3.5px;
+    margin-left: 200px;
+    margin-bottom: 130px;
+    border: none;
+    border-radius: 3px;
+    box-shadow: 1px 1px 5px 0.5px #f6f247;
+    transition: 0.5s ease-in-out;
+}
+
+
+#pin {
+    opacity: 0;
+    border: none;
+    position: absolute;
+    padding: 2px;
+    border-radius: 2px;
+    margin-left: 200px;
+    margin-bottom: -10px;
+    background: #f9ec00;
+    box-shadow: 1px 1px 5px 0.5px #f6f247;
+    transition: 0.5s ease-in-out;
+}
+
+.but1 {
+   position: absolute;
+    margin-right: 70px;
+    padding: 9px 18px;
+    border: none;
+    border-radius: 18px;
+    margin-top: 50px;
+    background: #1d1d15;
+    color: #f9ec00;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-family: 'Nova Round', cursive;
+    font-weight: 800;
+/*    transform: rotate(20deg);*/
+/*    transform: rotateX(180deg);*/
+}
+
+.but1:hover {
+    background: #2a2a21;
+    transition: 0.5s ease-in-out;
+    box-shadow: 1px 1px 7px 0.5px black;
+    transform: rotate(20deg);
+}
+
+.but2 {
+   position: absolute;
+    margin-left: 490px;
+    padding: 9px 18px;
+    border: none;
+    border-radius: 18px;
+    margin-top: 50px;
+    background: #1d1d15;
+    color: #f9ec00;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-family: 'Nova Round', cursive;
+    font-weight: 800;
+}
+
+.but2:hover {
+    background: #2a2a21;
+    transition: 0.5s ease-in-out;
+    box-shadow: 1px 1px 7px 0.5px black;
+    transform: rotate(-20deg);
+}
+
+.slider {
+    width: 800px;
+    height: 500px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 1px 1px 7px 0.5px black;
+    margin-left: 20px;
+}
+
+#dropMenu {
+    opacity: 0;
+    background: #1d1d15;
+    display: flex;
+    position: absolute;
+    margin-left: -835px;
+    margin-top: -225px;
+    padding-right: 35px;
+    padding-left: -50px;
+    border-radius: 12px;
+    border: none;
+    transition: 0.3s ease-in-out;
+    z-index: 1;
+    box-shadow: 1px 1px 7px 0.5px black;
+}
+
+hr {
+    border: 1px solid #f9ec00;
+    background: #f9ec00;
+    width: 100px;
+}
+
+li {
+    list-style: none;
+    line-height: 15px;
+    text-align: center;
+    font-family: 'Nova Round', cursive;
+    font-weight: 800;
+}
+
+.live:hover {
+    background: #2a2a21;
+    padding: 5px;
+    border-radius: 5px;
+    transition: 0.3s ease-in-out;
+}
+
+.live {
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.play:hover {
+    background: #2a2a21;
+    padding: 5px;
+    border-radius: 5px;
+    transition: 0.3s ease-in-out;
+}
+
+.play{
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.about:hover {
+    background: #2a2a21;
+    padding: 5px;
+    border-radius: 5px;
+    transition: 0.3s ease-in-out;
+}
+
+.about {
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.log:hover {
+    background: #2a2a21;
+    padding: 5px;
+    border-radius: 5px;
+    transition: 0.3s ease-in-out;
+}
+
+.log {
+    padding: 5px;
+    border-radius: 10px;
+}
+
+a {
+  cursor: pointer;
+}
+
+.menubtnback {
+    width: 30px;
+    height: 30px;
+    margin-right: 160px;
+    margin-top: -475px;
+    border: none;
+    border-radius: 30px;
+    box-shadow: 1px 1px 7px 0.01px black;
+    cursor: pointer;
+    transition: 0.1s ease-in-out;
+}
+
+/*
+.menubtnback::before {
+   background: white;
+}
+*/
+
+.menubtnback:active {
+    background: grey;
+}
+
+.menubtn {
+    width: 23px;
+    height: 23px;
+    justify-content: center;
+    margin-left: -2.7px
+}
+
+.slides {
+    width: 500%;
+    height: 500ox;
+    display: flex;
+}
+
+.slides input {
+    display: none;
+}
+
+.slide {
+    width: 20%;
+    transition: 2s;
+}
+
+.slide img {
+    width: 800px;
+    height: 500px;
+}
+
+/*css for manual slide navi*/
+
+.navigation-manual {
+    position: absolute;
+    width: 800px;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+}
+
+.manual-btn {
+    border: 2px solid #f9ec00;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.manual-btn:not(:last-child) {
+    margin-right: 40px;
+}
+
+.manual-btn:hover {
+    background: #f9ec00;
+}
+
+#radio1:checked ~ .first {
+    margin-left: 0;
+}
+
+#radio2:checked ~ .first {
+    margin-left: -20%;
+}
+
+#radio3:checked ~ .first {
+    margin-left: -40%;
+}
+
+#radio4:checked ~ .first {
+    margin-left: -60%;
+}
+
+/*css for automatic navigation*/
+
+.navigation-auto {
+    position: absolute;
+    display: flex;
+    width: 800px;
+    justify-content: center;
+    margin-top: 464px;
+}
+
+.navigation-auto div {
+    border: 2px solid #f9ec00;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 1s;
+}
+
+.navigation-auto div:not(:last-child) {
+    margin-right: 40px
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1 {
+    background: #f9ec00;
+} 
+
+#radio2:checked ~ .navigation-auto .auto-btn2 {
+    background: #f9ec00;
+} 
+
+#radio3:checked ~ .navigation-auto .auto-btn3 {
+    background: #f9ec00;
+} 
+
+#radio4:checked ~ .navigation-auto .auto-btn4 {
+    background: #f9ec00;
+} 
+
+
+/*for responsitivity*/
+@media(max-width: 991px) {
+    .slider {
+        width: 450px;
+        position: absolute;
+        margin-left: -5px
+    }
+    
+    .menubtnback {
+        margin-bottom: 345px;
+        margin-left: -165px;
+        width: 45px;
+        height: 45px;
+    }
+    
+    .menubtn {
+    width: 38px;
+    height: 38px;
+    justify-content: center;
+/*    margin-left: -2.7px*/
+}
+    
+    .navigation-manual {
+    visibility: hidden;
+}
+
+
+
+/*css for automatic navigation*/
+
+.navigation-auto {
+    position: absolute;
+    display: flex;
+    width: 450px;
+    justify-content: center;
+    margin-top: 464px;
+}
+
+.navigation-auto div {
+    border: 2px solid #f9ec00;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 1s;
+}
+
+.navigation-auto div:not(:last-child) {
+    margin-right: 10px
+}
+
+    .slide img {
+    align-items: center;
+    width: 450px;
+    height: 500px;
+}
+    
+}
+
+

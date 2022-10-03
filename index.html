@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Nova+Round&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>image slider</title>
+</head>
+<body>
+    
+    <button id="targ"></button>
+
+     <button id="pin"></button>
+    
+     <button class="but1" onmousemove="apTarget()">Button</button>
+     <button class="but2" onmousemove="apGet()">Button</button>
+    
+    <button class="menubtnback" onclick="dropMenu()" ondblclick="menuUp()">
+        
+        <div class="menubtn">
+        <script type="text/javascript" src="https://unpkg.com/lottie-interactive@latest/dist/lottie-interactive.js"></script>
+    
+    <lottie-interactive path="icons8-menu.json" interaction="switch"></lottie-interactive>
+        </div>
+        
+    </button>
+
+    
+    <div id="dropMenu" style="font-size:15px; color: #f9ec00; text-transform: uppercase" ><ul>
+        <li class="live"><a>Live chat</a></li>
+        <hr>
+        <li class="play"><a>Player stats</a></li>
+        <hr>
+        <li class="about"><a>About</a></li>
+        <hr>
+        <li class="log"><a>Logout</a></li>
+        </ul>
+    </div>
+    
+  <!--image slide start-->
+    <div class="slider">
+        
+        
+      <div class="slides">
+          
+         <!--radio buttons start-->
+          <input type="radio" name="radio-btn" id="radio1">
+          <input type="radio" name="radio-btn" id="radio2">
+          <input type="radio" name="radio-btn" id="radio3">
+          <input type="radio" name="radio-btn" id="radio4">
+          <!--radio buttons start-->
+          
+          <!--slide images start-->
+          <div class="slide first">
+             <img src="img1.jpg" alt="image">
+          </div>
+          <div class="slide">
+             <img src="img2.jpg" alt="image">
+          </div>
+          <div class="slide">
+             <img src="img3.jpg" alt="image">
+          </div>
+          <div class="slide">
+             <img src="img4.jpg" alt="image">
+          </div>
+          <!--slide images end-->
+          
+          <!--autonavi start-->
+           <div class="navigation-auto">
+             <div class="auto-btn1"></div>
+             <div class="auto-btn2"></div>
+             <div class="auto-btn3"></div>
+             <div class="auto-btn4"></div>
+           </div>
+          <!--autonavi start-->
+          
+        </div> 
+         <!--manual navi start-->
+        <div class="navigation-manual">
+           <label for="radio1" class="manual-btn"></label>
+           <label for="radio2" class="manual-btn"></label>
+           <label for="radio3" class="manual-btn"></label>
+           <label for="radio4" class="manual-btn"></label> 
+        </div>
+         <!--manual navi end-->
+    </div>
+  <!--image slide end-->
+    
+    <script type="text/javascript">
+     var counter = 1;
+     setInterval(function(){
+         document.getElementById('radio' + counter).checked = true;
+         counter++;
+         if(counter > 4){
+             counter= 1;
+         }
+     }, 5000);
+    </script>
+    
+    <script type="text/javascript" src="script.js"></script>
+    
+</body>
